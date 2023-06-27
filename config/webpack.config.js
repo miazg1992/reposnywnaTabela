@@ -1,24 +1,25 @@
 const path = require('path');
 
 //webpack plugins
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+// const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     mode: 'development',
-    entry: './src/index.js',
+    entry: ['./src/index.js', './src/components/main.scss'],
     output: {
-        filename: 'test-[contenthash:6].js',
+        filename: 'index-bundle.js',
         path: path.resolve(__dirname, '../', 'dist'),
     },
     devServer: {
-
-        compress: true,
-        port: 3000,
-        client: {
-            overlay: true,
+        static: {
+            directory: path.join(__dirname, '../', 'src/templates'),
+            watch: true,
         },
+        compress: true,
+        port: 8000,
+        liveReload: true
     },
     module: {
         rules: [
@@ -31,7 +32,7 @@ module.exports = {
             },
             {
                 test: /\.(scss|sass)$/,
-                use: [MiniCssExtractPlugin.loader, 'css-loader', "sass-loader"]
+                use: ['style-loader', 'css-loader', "sass-loader"]
             },
             {
                 test: /\.js$/,
@@ -46,13 +47,17 @@ module.exports = {
         ]
     },
     plugins: [
-        new MiniCssExtractPlugin({
-            filename: 'css/style-[contenthash:6].css'
-        }),
-        new CleanWebpackPlugin(),
-        new HtmlWebpackPlugin({
-            template: "src/templates/template.html",
-            title: "nowa aplikacja"
-        })
+        // new MiniCssExtractPlugin({
+        //     filename: 'css/style-[contenthash:6].css'
+        // }),
+        // new CleanWebpackPlugin(),
+        new HtmlWebpackPlugin(
+            {
+                filename: "index.html",
+                template: "src/templates/template.html",
+                title: "moja formatka",
+                inject: "body",
+            }
+        )
     ],
 }

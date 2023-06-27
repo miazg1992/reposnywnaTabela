@@ -9,3 +9,5 @@ function addImage(img) {
 }
 
 addImage(Photo)
+
+console.log("kurwa mam dość już nie chce");

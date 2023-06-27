@@ -7,9 +7,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
     mode: 'production',
-    entry: './src/index.js',
+    entry: {
+        index: './src/index.js'
+    },
     output: {
-        filename: 'test-[contenthash:6].js',
+        filename: '[name]-[contenthash:6].js',
         path: path.resolve(__dirname, '../', 'dist'),
     },
     module: {
