@@ -1,6 +1,15 @@
-$primary: #f0ed48;
+@import "variables";
+@import "reset";
+
+@import "typography";
+@import "base";
+@import "header";
+
+
+
+
 
 body {
-    background-color: $primary;
+    background-color: $secondary-color;
     font-size: 30px;
 }

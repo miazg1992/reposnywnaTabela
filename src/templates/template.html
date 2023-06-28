@@ -4,6 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet">
+
     <title>Document</title>
 </head>
 
@@ -11,16 +16,53 @@
 
 <body>
 
-    <h1>moja strona templatka</h1>
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <img class="header__logo" src="images/apple.png" alt="Jabłko">
+                <h1>Wartości odżywcze</h1>
 
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nam ut id laborum vero sequi beatae minus sunt itaque,
-    obcaecati tenetur dolor, excepturi quas veritatis aliquam? Eum, corporis totam! Aspernatur?
+            </div>
+        </div>
+    </header>
 
-    <p>bla</p>
-    <p>bla</p>
-    <p>bla</p>
+    <main>
+        <div class="container">
+            <div class="app">
+                <div class="app__description">
+                    <p>Poniżej uproszczona tablica</p>
+                    <p>W celu uzyskania szczegłółów skontaktuj się przez</p>
+                    <div class="app__contact-method">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path
+                                d="m19.23 15.26l-2.54-.29a1.99 1.99 0 0 0-1.64.57l-1.84 1.84a15.045 15.045 0 0 1-6.59-6.59l1.85-1.85c.43-.43.64-1.03.57-1.64l-.29-2.52a2.001 2.001 0 0 0-1.99-1.77H5.03c-1.13 0-2.07.94-2 2.07c.53 8.54 7.36 15.36 15.89 15.89c1.13.07 2.07-.87 2.07-2v-1.73c.01-1.01-.75-1.86-1.76-1.98z" />
+                        </svg>
+                        +48 123 456 789
+
+                    </div>
+                    <div class="app__contact-method">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                            <path
+                                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414L.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+                        </svg>
+                        <a href="mailto:example@gmail.com"> napisz</a>
+
+                    </div>
+                    <h2>Wykaz wartości odżywczych</h2>
+                    <div class="app__value"></div>
+                    <div class="app__images">
+                        <picture>
+                            <source media="(min-width: )" srcset="">
+                            <source media="(min-width: )" srcset="">
+                            <img src="" alt="">
+                        </picture>
+                    </div>
 
 
+                </div>
+            </div>
+        </div>
+    </main>
 
 </body>
 

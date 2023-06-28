@@ -56,7 +56,7 @@ module.exports = {
                 filename: "index.html",
                 template: "src/templates/template.html",
                 title: "moja formatka",
-                inject: "body",
+                // inject: "body",
             }
         )
     ],

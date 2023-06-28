@@ -1,4 +1,4 @@
-import Photo from './img/img1.jpg';
+import Photo from './assets/img/img1.jpg';
 import './components/main.scss';
 
 
