@@ -13,10 +13,13 @@ module.exports = {
         path: path.resolve(__dirname, '../', 'dist'),
     },
     devServer: {
-        static: {
-            directory: path.join(__dirname, '../', 'src/templates'),
-            watch: true,
-        },
+        static: [
+
+            {
+                directory: path.join(__dirname, '../', 'src'),
+            },
+
+        ],
         compress: true,
         port: 8000,
         liveReload: true
@@ -29,6 +32,10 @@ module.exports = {
                 generator: {
                     filename: 'img/[name]-[hash:6][ext][query]'
                 }
+            },
+            {
+                test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
+                type: 'asset/inline'
             },
             {
                 test: /\.(scss|sass)$/,
@@ -54,7 +61,7 @@ module.exports = {
         new HtmlWebpackPlugin(
             {
                 filename: "index.html",
-                template: "src/templates/template.html",
+                template: "src/template.html",
                 title: "moja formatka",
                 // inject: "body",
             }

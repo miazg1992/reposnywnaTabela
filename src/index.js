@@ -1,4 +1,4 @@
-import Photo from './assets/img/img1.jpg';
+import Photo from './assets/img1.jpg';
 import './components/main.scss';
 
 
@@ -10,4 +10,3 @@ function addImage(img) {
 
 addImage(Photo)
 
-console.log("kurwa mam dość już nie chce");
