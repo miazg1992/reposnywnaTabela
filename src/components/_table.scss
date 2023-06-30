@@ -1,0 +1,18 @@
+table {
+    width: 100%;
+
+    thead {
+        border-bottom: 2px solid darken($primary-color, 10%);
+        color: #fff;
+        background-color: $primary-color;
+    }
+
+    tr {
+        border-bottom: 1px solid #ddd;
+    }
+
+    th,
+    td {
+        padding: calc($main-spacing / 4);
+    }
+}

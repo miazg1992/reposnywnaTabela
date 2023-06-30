@@ -1,0 +1,7 @@
+ul {
+    li {
+        margin-bottom: calc($main-spacing / 2);
+        padding: calc($main-spacing / 2);
+        border-bottom: 1px solid $primary-color;
+    }
+}

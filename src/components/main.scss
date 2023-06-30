@@ -4,12 +4,5 @@
 @import "typography";
 @import "base";
 @import "header";
-
-
-
-
-
-body {
-    background-color: $secondary-color;
-    font-size: 30px;
-}
+@import "table";
+@import "list";
